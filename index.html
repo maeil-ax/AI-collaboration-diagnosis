@@ -503,7 +503,41 @@ body{font-family:'Freesentation','Paperlogy',-apple-system,BlinkMacSystemFont,sa
 .org-msg-title,.op-title,
 .result-score-big,.result-type-name,
 h1,h2,h3{font-family:'Paperlogy',-apple-system,sans-serif}
-</style>
+
+/* ── Core Principle 카드 ── */
+.ic.ic-core{border-color:var(--n500);background:linear-gradient(135deg,#EFF8FF,#F0FDFA)}
+.ic.ic-core .ic-num{background:linear-gradient(135deg,#006FA8,#00AEEF)}
+.ic-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;margin-bottom:8px
+}
+.ic-tag.core{background:#DBEAFE;color:#1E40AF}
+.ic-tag.tip{background:#FFF7ED;color:#C2410C}
+
+/* ── Pro Tip 하이라이트 카드 ── */
+.ic.ic-tip{
+  border:2px solid var(--gold);
+  background:linear-gradient(135deg,#FFFBEB,#FFF7E6);
+  position:relative;margin-top:20px
+}
+.ic.ic-tip::before{
+  content:'✦  추천 팁';
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#7C2D00;
+  font-size:11px;font-weight:700;font-family:'Paperlogy',-apple-system,sans-serif;
+  padding:4px 16px;border-radius:100px;white-space:nowrap;
+  box-shadow:0 2px 8px rgba(240,180,41,.35)
+}
+.ic.ic-tip .ic-num{background:linear-gradient(135deg,#D97706,#F59E0B)}
+.ic-tip-prompt{
+  background:rgba(0,0,0,.04);
+  border-left:3px solid var(--gold);
+  border-radius:0 8px 8px 0;
+  padding:12px 16px;margin:12px 0;
+  font-size:13px;color:#44260A;line-height:1.82;font-style:italic
+}
+.ic-tip-prompt strong{font-style:normal;color:#92400E;font-weight:700}</style>
 </head>
 <body>
 
@@ -688,7 +722,7 @@ h1,h2,h3{font-family:'Paperlogy',-apple-system,sans-serif}
             <span class="cc-arr">→</span>
             <span class="cc-aft">임원이 궁금해할 질문 5개 뽑아줘</span>
           </div>
-          <div class="ic-desc">단순 작성 요청을 넘어 "반대 의견은?", "빠진 논리는?", "상대 입장에서 어떻게 보일까?"처럼 사고 확장 도구로 활용합니다. 질문의 수준이 결과물의 수준을 결정합니다.</div>
+          <div class="ic-desc">단순 작성 요청을 넘어 <strong>"반대 의견은?", "빠진 논리는?", "상대 입장에서 어떻게 보일까?"</strong>처럼 사고 확장 도구로 활용합니다. <strong>질문의 수준이 결과물의 수준을 결정합니다.</strong></div>
         </div>
       </div>
       <div class="ic">
@@ -700,7 +734,7 @@ h1,h2,h3{font-family:'Paperlogy',-apple-system,sans-serif}
             <span class="cc-arr">→</span>
             <span class="cc-aft">AI 초안 + 내 판단으로 완성</span>
           </div>
-          <div class="ic-desc">AI는 빈 화면을 빠르게 채우는 데 강하고, 사람은 맥락 판단과 최종 책임에 강합니다. 이 역할 분담이 명확할수록 시간은 줄고 품질은 높아집니다.</div>
+          <div class="ic-desc"><strong>AI는 빈 화면을 빠르게 채우는 데 강하고, 사람은 맥락 판단과 최종 책임에 강합니다.</strong> 이 역할 분담이 명확할수록 <strong>시간은 줄고 품질은 높아집니다.</strong></div>
         </div>
       </div>
       <div class="ic">
@@ -712,7 +746,7 @@ h1,h2,h3{font-family:'Paperlogy',-apple-system,sans-serif}
             <span class="cc-arr">→</span>
             <span class="cc-aft">예상 질문 + 쟁점 사전 정리</span>
           </div>
-          <div class="ic-desc">회의 아젠다, 예상 질문, 핵심 보고 포인트, 반론 논리까지 — 회의 전 10분을 AI와 함께 쓰면 회의 자체의 질이 달라집니다.</div>
+          <div class="ic-desc">회의 아젠다, 예상 질문, 핵심 보고 포인트, 반론 논리까지 — <strong>회의 전 10분을 AI와 함께 쓰면 회의 자체의 질이 달라집니다.</strong></div>
         </div>
       </div>
       <div class="ic">
@@ -724,19 +758,41 @@ h1,h2,h3{font-family:'Paperlogy',-apple-system,sans-serif}
             <span class="cc-arr">→</span>
             <span class="cc-aft">나만의 프롬프트 템플릿</span>
           </div>
-          <div class="ic-desc">잘 작동하는 요청 방식을 저장해두고 반복 활용합니다. 자주 하는 메일, 보고서 구조, 회의 안내 — 이것만으로도 주간 2~3시간이 회수됩니다.</div>
+          <div class="ic-desc">잘 작동하는 요청 방식을 저장해두고 반복 활용합니다. 자주 하는 메일, 보고서 구조, 회의 안내 — <strong>이것만으로도 주간 2~3시간이 회수됩니다.</strong></div>
         </div>
       </div>
-      <div class="ic">
+      <!-- Core Principle -->
+      <div class="ic ic-core">
         <div class="ic-num">5</div>
         <div>
-          <div class="ic-title">검색보다 협업한다</div>
+          <div class="ic-tag core">Core Principle</div>
+          <div class="ic-title">AI를 Search가 아닌 Co-worker로 대우한다</div>
           <div class="ic-compare">
-            <span class="cc-bef">정답 요청</span>
+            <span class="cc-bef">정보 검색 도구</span>
             <span class="cc-arr">→</span>
-            <span class="cc-aft">함께 생각하고 고도화</span>
+            <span class="cc-aft">지적 파트너 (Co-worker)</span>
           </div>
-          <div class="ic-desc">"이게 뭐야?"보다 "이걸 어떻게 생각해?", "내가 놓친 게 있어?"가 훨씬 강력합니다. AI를 지식 검색창이 아닌 사고 파트너로 대할 때 한 번의 대화 가치가 수십 배 달라집니다.</div>
+          <div class="ic-desc">AI를 단순한 정보 검색 도구로 쓰지 마세요. 내 업무를 가장 잘 아는 <strong>'지적 파트너(Co-worker)'</strong>로 대우할 때 비로소 생산성이 폭발합니다. 질문을 던지기보다 <strong>대화를 시도하세요.</strong></div>
+        </div>
+      </div>
+
+      <!-- Pro Tip -->
+      <div class="ic ic-tip">
+        <div class="ic-num">6</div>
+        <div>
+          <div class="ic-tag tip">추천 팁</div>
+          <div class="ic-title">의도 확인 + 역질문 유도로 오차를 제거한다</div>
+          <div class="ic-compare">
+            <span class="cc-bef">그냥 요청하고 결과 수정</span>
+            <span class="cc-arr">→</span>
+            <span class="cc-aft">AI가 먼저 이해를 확인하게</span>
+          </div>
+          <div class="ic-desc">프롬프트 마지막에 아래 문장을 반드시 덧붙이세요. AI가 내 의도를 잘못 짚는 시간을 획기적으로 줄여줍니다.</div>
+          <div class="ic-tip-prompt">
+            "내가 지시한 내용을 어떻게 이해했는지 요약해주고,<br>
+            더 정확한 답변을 위해 <strong>확인이 필요한 부분이 있다면 나에게 질문해줘.</strong>"
+          </div>
+          <div class="ic-desc">이 한 문장이 엉뚱한 결과물을 받고 다시 요청하는 비효율을 없애줍니다. <strong>복잡한 업무일수록, 중요한 문서일수록</strong> 반드시 사용하세요.</div>
         </div>
       </div>
     </div>
